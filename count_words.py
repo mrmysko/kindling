@@ -6,27 +6,27 @@ def main():
     # Input a sentence
     sentence = input("Enter a sentence: ")
     # Get the amount of words
-    words = countWords(sentence)
+    words = count_words(sentence)
 
     # Get average word length.
-    length = avgLength(sentence)
+    length = avg_length(sentence)
 
     print(f"{words} words. Words were, on average, {length} characters long.")
 
 
-def countWords(sentence):
+def count_words(sentence):
     words = sentence.split()
     wordCount = len(words)
     return wordCount
 
 
-def avgLength(sentence):
-    totalChars = 0
+def avg_length(sentence):
+    total_chars = 0
     words = sentence.split()
     for i, word in enumerate(words):
-        totalChars += len(word)
+        total_chars += len(word)
 
-    return round(totalChars / len(words), 2)
+    return round(total_chars / len(words), 2)
 
 
 if __name__ == "__main__":
